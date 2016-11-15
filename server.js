@@ -17,7 +17,7 @@ app.get('/about', function (req, res, next) {
    // console.log('about route hit');
     next();
 }, function (request, response) {
-    response.send('about page');
+    response.send('about us');
 });
 
 var publicDir = __dirname + '/public';
