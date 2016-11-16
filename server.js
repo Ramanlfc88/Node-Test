@@ -19,7 +19,7 @@ app.get('/about', function (req, res, next) {
    // console.log('about route hit');
     next();
 }, function (request, response) {
-    response.send('about us');
+    response.send('about page');
 });
 
 var publicDir = __dirname + '/public';
