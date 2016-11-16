@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+var PORT = process.env.PORT || 3000;
+
 
 function logger(req, res, next) {
     console.log(new Date()+ ' : '+req.method + ' for route ' + req.originalUrl);
@@ -23,6 +25,6 @@ app.get('/about', function (req, res, next) {
 var publicDir = __dirname + '/public';
 app.use(express.static(publicDir));
 
-app.listen('3000', function () {
+app.listen(PORT, function () {
     console.log('server started');
 });
